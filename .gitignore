@@ -1,0 +1,26 @@
+# .NET
+bin/
+obj/
+*.user
+.vs/
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Integration.json
+
+# Angular
+GenshinDataApp.Frontend/node_modules/
+GenshinDataApp.Frontend/dist/
+GenshinDataApp.Frontend/.angular/
+GenshinDataApp.Frontend/src/environments/environment.development.ts
+
+# Copilot instructions -- arquitectura interna, no publica
+.github/copilot-instructions/
+
+# General
+.env
+*.env.local
+docs/_site/
+docs/backend/
+docs/frontend/
+*.log
+logs/
