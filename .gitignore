@@ -24,3 +24,4 @@ docs/backend/
 docs/frontend/
 *.log
 logs/
+git_check_result.txt 
