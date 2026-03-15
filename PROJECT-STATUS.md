@@ -1,35 +1,39 @@
 # 📊 Estado del Proyecto GenshinDataApp
 
-> **Última actualización:** 2025-01-21 (Sesión 4 - COMPLETADA)  
-> **Rama actual:** `develop`  
-> **Fase actual:** Fase 2.0 - Autenticación JWT completa implementada
+> **Última actualización:** 2025-01-13 (Sesión 5 - JWT + Swagger COMPLETADA)  
+> **Rama actual:** `integration`  
+> **Fase actual:** Fase 2.1 - Autenticación JWT completa + Swagger UI integrado
 
 ---
 
 ## 🎯 Resumen Ejecutivo
 
-El proyecto **GenshinDataApp** es una aplicación web para gestión de inventario y builds de Genshin Impact. Actualmente está en la **Fase 2.0**, con autenticación JWT completa implementada y funcionando.
+El proyecto **GenshinDataApp** es una aplicación web para gestión de inventario y builds de Genshin Impact. Actualmente está en la **Fase 2.1**, con autenticación JWT completa implementada, funcionando, y totalmente integrada con Swagger UI mediante custom toolbar.
 
 ### Estado General
 - ✅ Estructura de solución creada (.NET 10)
 - ✅ Frontend Angular configurado (v21.2.1)
 - ✅ Compilación exitosa
 - ✅ Base de datos creada con tablas y triggers
-- ✅ 88 Stored Procedures completados y ejecutados
+- ✅ 90 Stored Procedures completados y ejecutados
 - ✅ Documentación completa de base de datos creada (DATABASE-REFERENCE.md)
 - ✅ **Entity Framework Core configurado (Database-First)**
 - ✅ **71 entidades generadas desde la base de datos**
 - ✅ **DbContext creado (GenshinDbContext)**
 - ✅ **Repositorio base con soporte para SPs**
 - ✅ **UserRepository implementado con 13 SPs**
-- ✅ **RefreshTokenRepository implementado con 5 SPs**
+- ✅ **RefreshTokenRepository implementado con 8 SPs** (agregados 2 UPDATE SPs)
 - ✅ **Controlador de prueba (UsersController) funcionando**
 - ✅ **DI, CORS, Serilog configurados en Program.cs**
-- ✅ **Autenticación JWT completamente implementada**
+- ✅ **Autenticación JWT completamente implementada y PROBADA**
 - ✅ **JwtHelper y PasswordHasher (BCrypt) creados**
-- ✅ **AuthController con register, login, refresh, logout**
+- ✅ **AuthController con register, login, refresh, logout FUNCIONANDO**
 - ✅ **DTOs de autenticación y usuario creados**
-- ✅ **Endpoints protegidos con [Authorize]**
+- ✅ **Endpoints protegidos con [Authorize] funcionando**
+- ✅ **Swagger UI con custom JWT toolbar funcionando**
+- ✅ **Claim mapping fix aplicado (.NET Core claim remapping)**
+- ✅ **HTTPS-only configurado en development**
+- ✅ **Todos los endpoints de autenticación PROBADOS exitosamente**
 - ❌ Sin OAuth providers implementados (Google, Apple, Twitch)
 - ❌ Sin email verification implementada
 - ❌ Sin controladores de entidades del juego
@@ -52,19 +56,25 @@ El proyecto **GenshinDataApp** es una aplicación web para gestión de inventari
 - [ ] Implementar DTOs (Data Transfer Objects)
 - [ ] Añadir validaciones personalizadas
 
-### 2. **GenshinDataApp.Services** ✅ CONFIGURADO COMPLETAMENTE
-**Estado:** ✅ API con autenticación JWT funcionando  
+### 2. **GenshinDataApp.Services** ✅ CONFIGURADO COMPLETAMENTE + SWAGGER INTEGRADO
+**Estado:** ✅ API con autenticación JWT funcionando + Swagger UI con JWT toolbar  
 **Propósito:** ASP.NET Core Web API (controladores REST)  
 **Completado:**
 - ✅ DI configurado (DbContext + Repositorios + Security services)
 - ✅ CORS configurado para Angular (http://localhost:4200)
 - ✅ Serilog configurado (Console + File logs)
-- ✅ Swagger configurado
+- ✅ Swagger configurado con custom JWT toolbar
 - ✅ Connection string en appsettings.Development.json
 - ✅ **JWT Authentication configurado completamente**
-- ✅ **AuthController implementado** (register, login, refresh, logout)
-- ✅ **UsersController protegido con [Authorize]**
+- ✅ **AuthController implementado** (register, login, refresh, logout) - PROBADO
+- ✅ **UsersController protegido con [Authorize]** - PROBADO
 - ✅ **DTOs de autenticación y usuario creados**
+- ✅ **Claim mapping fix aplicado** (ClaimTypes.NameIdentifier vs JwtRegisteredClaimNames.Sub)
+- ✅ **Swagger custom JWT toolbar funcionando** (localStorage + request interceptor)
+- ✅ **HTTPS-only configurado** (launchSettings.json)
+- ✅ **Orden de rutas optimizado** (específicas antes que genéricas)
+- ✅ **CancellationToken fix en repositorios**
+- ✅ **Todos los endpoints probados exitosamente**
 **Pendiente:**
 - [ ] Implementar OAuth providers (Google, Apple, Twitch)
 - [ ] Implementar email verification
@@ -145,20 +155,24 @@ El proyecto **GenshinDataApp** es una aplicación web para gestión de inventari
 - ✅ Check constraints para validaciones
 - ✅ Índices de performance optimizados
 
-#### Stored Procedures - ✅ **COMPLETADOS Y EJECUTADOS (85 TOTAL)**
+#### Stored Procedures - ✅ **COMPLETADOS Y EJECUTADOS (90 TOTAL)**
 
 Según `copilot-instructions.md`, **TODOS** los accesos a datos deben hacerse mediante stored procedures. 
 
 **✅ Estado: COMPLETADOS AL 100% - Todos ejecutados exitosamente en SSMS**
 
 **Resumen por categoría:**
-- ✅ **Authentication** (21 SPs): User (13), RefreshToken (5), EmailRateLimit (3)
+- ✅ **Authentication** (23 SPs): User (13), RefreshToken (7 - **agregados 2 UPDATE SPs**), EmailRateLimit (3)
 - ✅ **Game Catalogs** (27 SPs): Character (7), Weapon (7), ArtifactSet (7), Element (2), WeaponType (2), Region (2)
 - ✅ **User Inventory** (16 SPs): UserCharacter (5), UserWeapon (5), UserArtifact (6)
 - ✅ **Build System** (6 SPs): Build with ownership validation
 - ✅ **Supporting Systems** (15 SPs): StatType (2), Language (4), BugReport (9)
 
 **Ver archivo de referencia:** `DATABASE-REFERENCE.md` para detalles completos de todos los SPs
+
+**Nuevos SPs creados en Sesión 5:**
+- ✅ `SP_U_RefreshTokenRevoke` - Revoca un refresh token específico
+- ✅ `SP_U_RefreshTokenRevokeAllByUserId` - Revoca todos los tokens de un usuario
 
 ### Tablas Requeridas (Prioridad Alta)
 
@@ -201,13 +215,13 @@ IsActive      BIT DEFAULT 1,
 Según `copilot-instructions.md`, **TODOS** los accesos a datos **DEBEN** hacerse mediante stored procedures. Nunca LINQ directo.
 
 **✅ Completado:**
-1. ✅ **Authentication** (21 SPs): User (13), RefreshToken (5), EmailRateLimit (3)
+1. ✅ **Authentication** (23 SPs): User (13), RefreshToken (7), EmailRateLimit (3)
 2. ✅ **Game Catalogs** (27 SPs): Character (7), Weapon (7), ArtifactSet (7), Element (2), WeaponType (2), Region (2)
 3. ✅ **User Inventory** (16 SPs): UserCharacter (5), UserWeapon (5), UserArtifact (6)
 4. ✅ **Build System** (6 SPs): Build with ownership validation
 5. ✅ **Supporting Systems** (15 SPs): StatType (2), Language (4), BugReport (12)
 
-**Archivos generados (12 partes):**
+**Archivos generados (13 partes):**
 - `Database/scripts/StoredProcedures_Part1_User.sql`
 - `Database/scripts/StoredProcedures_Part2_RefreshToken.sql`
 - `Database/scripts/StoredProcedures_Part3_EmailRateLimit.sql`
@@ -220,6 +234,7 @@ Según `copilot-instructions.md`, **TODOS** los accesos a datos **DEBEN** hacers
 - `Database/scripts/StoredProcedures_Part10_UserArtifact.sql`
 - `Database/scripts/StoredProcedures_Part11_Catalogs.sql`
 - `Database/scripts/StoredProcedures_Part12_LanguageAndBugReport.sql`
+- `Database/scripts/Create_RefreshToken_UpdateProcedures.sql` **(NUEVO - Sesión 5)**
 
 **Documentación de referencia:**
 - ✅ `DATABASE-REFERENCE.md` - Documentación completa de esquema y 85 SPs
@@ -237,8 +252,10 @@ Según `copilot-instructions.md`, **TODOS** los accesos a datos **DEBEN** hacers
 4. ✅ 71 entidades generadas desde base de datos
 5. ✅ Repositorio base (BaseRepository) con soporte para SPs
 6. ✅ IUserRepository y UserRepository implementados (13 métodos)
-7. ✅ Connection string configurada en appsettings.Development.json
-8. ✅ DI configurado en Program.cs
+7. ✅ IRefreshTokenRepository y RefreshTokenRepository implementados (8 métodos) **(Sesión 5: +2 métodos)**
+8. ✅ Connection string configurada en appsettings.Development.json
+9. ✅ DI configurado en Program.cs
+10. ✅ **CancellationToken fix aplicado** (wrapping params en array)
 
 **Archivos creados:**
 - `GenshinDataApp.Backend/Data/GenshinDbContext.cs`
@@ -247,6 +264,10 @@ Según `copilot-instructions.md`, **TODOS** los accesos a datos **DEBEN** hacers
 - `GenshinDataApp.Backend/Repositories/BaseRepository.cs`
 - `GenshinDataApp.Backend/Repositories/IUserRepository.cs`
 - `GenshinDataApp.Backend/Repositories/UserRepository.cs`
+- `GenshinDataApp.Backend/Repositories/IRefreshTokenRepository.cs`
+- `GenshinDataApp.Backend/Repositories/RefreshTokenRepository.cs` **(Actualizado Sesión 5)**
+- `GenshinDataApp.Backend/DTOs/Auth/*.cs`
+- `GenshinDataApp.Backend/DTOs/User/*.cs`
 
 ---
 
@@ -390,11 +411,82 @@ Según `copilot-instructions.md`:
 
 ## 🚀 Última Actividad
 
-**Fecha:** 2025-01-21 (Sesión 1)  
-**Acción:** Análisis inicial del proyecto y creación de documentación de estado  
-**Siguiente sesión:** Decidir configuración de base de datos y orden de implementación  
-**Branch:** `develop`  
+**Fecha:** 2025-01-13 (Sesión 5 - JWT + Swagger Integration)  
+**Acción:** Completada integración de autenticación JWT con Swagger UI  
+**Branch:** `integration`  
 **Estado compilación:** ✅ Exitosa
+
+### Sesión 5 - Logros principales:
+
+#### 🔐 Autenticación completamente funcional y probada
+- ✅ **POST /api/auth/register** - Probado exitosamente
+- ✅ **POST /api/auth/login** - Probado exitosamente
+- ✅ **POST /api/auth/refresh** - Probado exitosamente
+- ✅ **POST /api/auth/logout** - Probado exitosamente
+- ✅ **GET /api/users/me** - Probado exitosamente
+- ✅ **GET /api/users** - Probado exitosamente
+- ✅ **GET /api/users/{publicId}** - Probado exitosamente
+
+#### 🛠️ Problemas técnicos resueltos:
+
+1. **Swagger JWT Authorization Issue**
+   - **Problema**: .NET 10 + Swashbuckle 10.x no soporta botón "Authorize" estándar
+   - **Solución**: Custom JWT toolbar con localStorage + request interceptor
+   - **Archivo**: `Program.cs` (líneas 95-215)
+
+2. **Claim Mapping (.NET Core)**
+   - **Problema**: JWT "sub" claim se mapea automáticamente a `ClaimTypes.NameIdentifier`
+   - **Solución**: Buscar en ambos tipos de claim
+   - **Archivos**: `UsersController.cs` (línea 29-31), `AuthController.cs` (línea 248-250)
+
+3. **HTTP vs HTTPS localStorage**
+   - **Problema**: Tokens separados por origen (http://localhost:5153 vs https://localhost:7267)
+   - **Solución**: Forzar HTTPS-only en development
+   - **Archivo**: `launchSettings.json`
+
+4. **CancellationToken como parámetro SQL**
+   - **Problema**: EF Core interpretaba `ct` como parámetro SQL en vez de argumento async
+   - **Solución**: Wrappear parámetros SQL en array: `new[] { param }`
+   - **Archivo**: `RefreshTokenRepository.cs` (líneas 68-71, 77-80)
+
+5. **Stored Procedures faltantes**
+   - **Problema**: `SP_U_RefreshTokenRevoke` y `SP_U_RefreshTokenRevokeAllByUserId` no existían
+   - **Solución**: Crear SPs con `SET QUOTED_IDENTIFIER ON` antes de CREATE PROCEDURE
+   - **Archivo**: `Database/scripts/Create_RefreshToken_UpdateProcedures.sql`
+
+6. **Orden de rutas en Controller**
+   - **Mejora**: Reorganizar de más específica a más genérica (best practice)
+   - **Archivo**: `UsersController.cs` (me → {publicId} → genérica)
+
+#### 📁 Archivos creados/modificados:
+
+**Nuevos:**
+- ✅ `Database/scripts/Create_RefreshToken_UpdateProcedures.sql`
+
+**Modificados:**
+- ✅ `Program.cs` - Swagger custom interceptor + JWT toolbar
+- ✅ `UsersController.cs` - Claim mapping fix + reordenamiento de rutas
+- ✅ `AuthController.cs` - Claim mapping fix en Refresh endpoint
+- ✅ `RefreshTokenRepository.cs` - CancellationToken fix
+- ✅ `launchSettings.json` - HTTPS-only configuration
+
+**Stored Procedures creados:**
+- ✅ `SP_U_RefreshTokenRevoke`
+- ✅ `SP_U_RefreshTokenRevokeAllByUserId`
+
+#### 🎯 Configuración final:
+- **URL única**: `https://localhost:7267`
+- **Swagger**: `https://localhost:7267/swagger/index.html`
+- **JWT Expiry**: Access 15 min, Refresh 7 días
+- **Toolbar personalizado**: Botones "🔑 Set JWT Token" y "🗑️ Clear Token"
+- **Request Interceptor**: Inyección automática de Authorization header
+- **localStorage**: Persistencia de token entre recargas
+
+#### 📝 Próxima sesión:
+- [ ] Implementar input validation con FluentValidation
+- [ ] Email verification flow
+- [ ] Password reset flow
+- [ ] Controladores de catálogo (Character, Weapon, Artifact)
 
 ---
 

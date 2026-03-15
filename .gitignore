@@ -28,3 +28,6 @@ docs/frontend/
 *.log
 logs/
 git_check_result.txt
+
+# Troubleshooting guide -- información interna de debugging
+TROUBLESHOOTING.md

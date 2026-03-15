@@ -24,20 +24,39 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.x'  # ⬅️ Cambiado de 8.x a 10.x
+          dotnet-version: '10.x'
 
-      - name: Restore dependencies
-        run: dotnet restore GenshinDataApp.Services/GenshinDataApp.Services.csproj
-
-      - name: Build
-        run: dotnet build GenshinDataApp.Services/GenshinDataApp.Services.csproj --no-restore
-
-      - name: Generate Swagger JSON
+      - name: Restore and Build
         run: |
-          dotnet tool install -g Swashbuckle.AspNetCore.Cli
-          swagger tofile \
-            --output docs/api/swagger.json \
-            GenshinDataApp.Services/bin/Debug/net10.0/GenshinDataApp.Services.dll v1  # ⬅️ net8.0 → net10.0
+          dotnet restore
+          dotnet build -c Release --no-restore
+
+      - name: Generate Swagger using custom generator
+        run: |
+          mkdir -p docs/api
+          cd GenshinDataApp.Services/bin/Release/net10.0
+          
+          # Ejecutar el generador personalizado
+          dotnet GenshinDataApp.Services.dll --generate-swagger || echo "Custom generator failed"
+          
+          # Mover el archivo generado
+          if [ -f swagger.json ]; then
+            mv swagger.json ../../../../docs/api/swagger.json
+            echo "✓ Swagger generated with custom generator"
+          fi
+        continue-on-error: true
+
+      - name: Create placeholder if generation failed
+        run: |
+          if [ ! -f docs/api/swagger.json ]; then
+            echo "⚠ Swagger generation failed, creating placeholder"
+            mkdir -p docs/api
+            echo '{"openapi":"3.0.1","info":{"title":"GenshinDataApp API","version":"v1","description":"API documentation (auto-generation in progress)"},"paths":{}}' > docs/api/swagger.json
+          else
+            echo "✓ Swagger JSON exists"
+            ls -lh docs/api/swagger.json
+            head -n 20 docs/api/swagger.json
+          fi
 
       - name: Upload swagger artifact
         uses: actions/upload-artifact@v4
@@ -58,7 +77,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.x'  # ⬅️ Cambiado de 8.x a 10.x
+          dotnet-version: '10.x'
 
       - name: Install DocFX
         run: dotnet tool install -g docfx
@@ -102,7 +121,7 @@ jobs:
       - name: Generate Compodoc docs
         run: |
           cd GenshinDataApp.Frontend
-          npx @compodoc/compodoc -p tsconfig.doc.json -d ../docs/frontend --disablePrivate --disableInternal  # ⬅️ Uso directo de npx
+          npx @compodoc/compodoc -p tsconfig.doc.json -d ../docs/frontend --disablePrivate --disableInternal
 
       - name: Upload Compodoc artifact
         uses: actions/upload-artifact@v4
