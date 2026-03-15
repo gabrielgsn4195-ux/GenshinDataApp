@@ -24,20 +24,55 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '10.x'  # ⬅️ Cambiado de 8.x a 10.x
+          dotnet-version: '10.x'
 
       - name: Restore dependencies
-        run: dotnet restore GenshinDataApp.Services/GenshinDataApp.Services.csproj
+        run: dotnet restore
 
       - name: Build
-        run: dotnet build GenshinDataApp.Services/GenshinDataApp.Services.csproj --no-restore
+        run: dotnet build --no-restore -c Release
+
+      - name: Create temporary appsettings for CI
+        run: |
+          cat > GenshinDataApp.Services/appsettings.CI.json << 'EOF'
+          {
+            "ConnectionStrings": {
+              "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=TempSwaggerGen;Integrated Security=true"
+            },
+            "Jwt": {
+              "Secret": "TemporarySecretKeyForSwaggerGeneration123456789012345",
+              "ExpiryMinutes": 15,
+              "Issuer": "GenshinDataApp",
+              "Audience": "GenshinDataApp.Frontend"
+            },
+            "Logging": {
+              "LogLevel": {
+                "Default": "Warning"
+              }
+            }
+          }
+          EOF
 
       - name: Generate Swagger JSON
         run: |
-          dotnet tool install -g Swashbuckle.AspNetCore.Cli
-          swagger tofile \
-            --output docs/api/swagger.json \
-            GenshinDataApp.Services/bin/Debug/net10.0/GenshinDataApp.Services.dll v1  # ⬅️ net8.0 → net10.0
+          mkdir -p docs/api
+          cd GenshinDataApp.Services
+          ASPNETCORE_ENVIRONMENT=CI timeout 30s dotnet run --no-build -c Release &
+          PID=$!
+          sleep 15
+          curl -f -o ../docs/api/swagger.json http://localhost:5000/swagger/v1/swagger.json || \
+          wget -O ../docs/api/swagger.json http://localhost:5000/swagger/v1/swagger.json
+          kill $PID 2>/dev/null || true
+        timeout-minutes: 2
+
+      - name: Verify swagger.json was created
+        run: |
+          if [ ! -f docs/api/swagger.json ]; then
+            echo "ERROR: Swagger JSON was not generated"
+            exit 1
+          fi
+          echo "✓ Swagger JSON generated successfully"
+          ls -lh docs/api/swagger.json
 
       - name: Upload swagger artifact
         uses: actions/upload-artifact@v4
