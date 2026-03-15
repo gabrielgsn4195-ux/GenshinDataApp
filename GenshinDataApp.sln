@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenshinDataApp.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenshinDataApp.Test", "GenshinDataApp.Test\GenshinDataApp.Test.csproj", "{33279890-DF54-4F22-A8BB-57D898C15872}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "GenshinDataApp.Frontend", "GenshinDataApp.Frontend\GenshinDataApp.Frontend.esproj", "{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "GenshinDataApp.Frontend", "GenshinDataApp.Frontend\GenshinDataApp.Frontend.esproj", "{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,24 +71,12 @@ Global
 		{33279890-DF54-4F22-A8BB-57D898C15872}.Release|x64.Build.0 = Release|Any CPU
 		{33279890-DF54-4F22-A8BB-57D898C15872}.Release|x86.ActiveCfg = Release|Any CPU
 		{33279890-DF54-4F22-A8BB-57D898C15872}.Release|x86.Build.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x64.Build.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x64.Deploy.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x86.Build.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Debug|x86.Deploy.0 = Debug|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x64.ActiveCfg = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x64.Build.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x64.Deploy.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x86.ActiveCfg = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x86.Build.0 = Release|Any CPU
-		{9E835B2F-EBF4-B055-FFB2-8A3B13054E7C}.Release|x86.Deploy.0 = Release|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Release|x64.ActiveCfg = Release|Any CPU
+		{1DC0DAAB-3A98-4204-94EC-6B7FCBB54D7B}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
