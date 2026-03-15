@@ -35,8 +35,13 @@ jobs:
         run: |
           mkdir -p docs/api
           dotnet new tool-manifest --force
-          dotnet tool install Swashbuckle.AspNetCore.Cli
-          dotnet swagger tofile --output docs/api/swagger.json GenshinDataApp.Services/bin/Release/net10.0/GenshinDataApp.Services.dll v1
+          dotnet tool install Swashbuckle.AspNetCore.Cli --version 6.5.0
+          
+          # Navegar al directorio de salida
+          cd GenshinDataApp.Services/bin/Release/net10.0
+          
+          # Generar swagger usando el DLL
+          dotnet swagger tofile --output ../../../../docs/api/swagger.json GenshinDataApp.Services.dll v1
         continue-on-error: true
 
       - name: Create placeholder if generation failed
