@@ -31,17 +31,19 @@ jobs:
           dotnet restore
           dotnet build -c Release --no-restore
 
-      - name: Generate Swagger using Swashbuckle CLI
+      - name: Generate Swagger using custom generator
         run: |
           mkdir -p docs/api
-          dotnet new tool-manifest --force
-          dotnet tool install Swashbuckle.AspNetCore.Cli --version 6.5.0
-          
-          # Navegar al directorio de salida
           cd GenshinDataApp.Services/bin/Release/net10.0
           
-          # Generar swagger usando el DLL
-          dotnet swagger tofile --output ../../../../docs/api/swagger.json GenshinDataApp.Services.dll v1
+          # Ejecutar el generador personalizado
+          dotnet GenshinDataApp.Services.dll --generate-swagger || echo "Custom generator failed"
+          
+          # Mover el archivo generado
+          if [ -f swagger.json ]; then
+            mv swagger.json ../../../../docs/api/swagger.json
+            echo "✓ Swagger generated with custom generator"
+          fi
         continue-on-error: true
 
       - name: Create placeholder if generation failed
@@ -51,8 +53,9 @@ jobs:
             mkdir -p docs/api
             echo '{"openapi":"3.0.1","info":{"title":"GenshinDataApp API","version":"v1","description":"API documentation (auto-generation in progress)"},"paths":{}}' > docs/api/swagger.json
           else
-            echo "✓ Swagger JSON generated successfully"
+            echo "✓ Swagger JSON exists"
             ls -lh docs/api/swagger.json
+            head -n 20 docs/api/swagger.json
           fi
 
       - name: Upload swagger artifact
