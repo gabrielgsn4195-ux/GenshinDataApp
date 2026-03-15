@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class GenshinDbContext | GenshinDataApp - Backend Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class GenshinDbContext | GenshinDataApp - Backend Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gabrielgsn4195-ux/GenshinDataApp/new/integration/apiSpec/new?filename=GenshinDataApp_Backend_Data_GenshinDbContext.md&amp;value=---%0Auid%3A%20GenshinDataApp.Backend.Data.GenshinDbContext%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GenshinDataApp.Backend.Data.GenshinDbContext">
+
+
+
+  <h1 id="GenshinDataApp_Backend_Data_GenshinDbContext" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext" class="text-break">
+Class GenshinDbContext  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GenshinDataApp.html">GenshinDataApp</a>.<a class="xref" href="GenshinDataApp.Backend.html">Backend</a>.<a class="xref" href="GenshinDataApp.Backend.Data.html">Data</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GenshinDataApp.Backend.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GenshinDbContext : DbContext, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService, IDisposable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext">DbContext</a></div>
+      <div><span class="xref">GenshinDbContext</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1">IInfrastructure</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>&gt;</div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbcontextdependencies">IDbContextDependencies</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbsetcache">IDbSetCache</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.internal.idbcontextpoolable">IDbContextPoolable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">IResettableService</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1">DbContext.Set&lt;TEntity&gt;()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#microsoft-entityframeworkcore-dbcontext-set-1(system-string)">DbContext.Set&lt;TEntity&gt;(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring">DbContext.OnConfiguring(DbContextOptionsBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.configureconventions">DbContext.ConfigureConventions(ModelConfigurationBuilder)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges">DbContext.SaveChanges()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#microsoft-entityframeworkcore-dbcontext-savechanges(system-boolean)">DbContext.SaveChanges(bool)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-threading-cancellationtoken)">DbContext.SaveChangesAsync(CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#microsoft-entityframeworkcore-dbcontext-savechangesasync(system-boolean-system-threading-cancellationtoken)">DbContext.SaveChangesAsync(bool, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.dispose">DbContext.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.disposeasync">DbContext.DisposeAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry-1(-0)">DbContext.Entry&lt;TEntity&gt;(TEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.entry#microsoft-entityframeworkcore-dbcontext-entry(system-object)">DbContext.Entry(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add-1(-0)">DbContext.Add&lt;TEntity&gt;(TEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync-1(-0-system-threading-cancellationtoken)">DbContext.AddAsync&lt;TEntity&gt;(TEntity, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach-1(-0)">DbContext.Attach&lt;TEntity&gt;(TEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update-1(-0)">DbContext.Update&lt;TEntity&gt;(TEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove-1(-0)">DbContext.Remove&lt;TEntity&gt;(TEntity)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.add#microsoft-entityframeworkcore-dbcontext-add(system-object)">DbContext.Add(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addasync#microsoft-entityframeworkcore-dbcontext-addasync(system-object-system-threading-cancellationtoken)">DbContext.AddAsync(object, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attach#microsoft-entityframeworkcore-dbcontext-attach(system-object)">DbContext.Attach(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.update#microsoft-entityframeworkcore-dbcontext-update(system-object)">DbContext.Update(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.remove#microsoft-entityframeworkcore-dbcontext-remove(system-object)">DbContext.Remove(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-object())">DbContext.AddRange(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-object())">DbContext.AddRangeAsync(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-object())">DbContext.AttachRange(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-object())">DbContext.UpdateRange(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-object())">DbContext.RemoveRange(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrange#microsoft-entityframeworkcore-dbcontext-addrange(system-collections-generic-ienumerable((system-object)))">DbContext.AddRange(IEnumerable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.addrangeasync#microsoft-entityframeworkcore-dbcontext-addrangeasync(system-collections-generic-ienumerable((system-object))-system-threading-cancellationtoken)">DbContext.AddRangeAsync(IEnumerable&lt;object&gt;, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.attachrange#microsoft-entityframeworkcore-dbcontext-attachrange(system-collections-generic-ienumerable((system-object)))">DbContext.AttachRange(IEnumerable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.updaterange#microsoft-entityframeworkcore-dbcontext-updaterange(system-collections-generic-ienumerable((system-object)))">DbContext.UpdateRange(IEnumerable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.removerange#microsoft-entityframeworkcore-dbcontext-removerange(system-collections-generic-ienumerable((system-object)))">DbContext.RemoveRange(IEnumerable&lt;object&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find(system-type-system-object())">DbContext.Find(Type, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object())">DbContext.FindAsync(Type, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync(system-type-system-object()-system-threading-cancellationtoken)">DbContext.FindAsync(Type, object[], CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.find#microsoft-entityframeworkcore-dbcontext-find-1(system-object())">DbContext.Find&lt;TEntity&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object())">DbContext.FindAsync&lt;TEntity&gt;(params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#microsoft-entityframeworkcore-dbcontext-findasync-1(system-object()-system-threading-cancellationtoken)">DbContext.FindAsync&lt;TEntity&gt;(object[], CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression">DbContext.FromExpression&lt;TResult&gt;(Expression&lt;Func&lt;IQueryable&lt;TResult&gt;&gt;&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.database">DbContext.Database</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.changetracker">DbContext.ChangeTracker</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.model">DbContext.Model</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.contextid">DbContext.ContextId</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savingchanges">DbContext.SavingChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savedchanges">DbContext.SavedChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesfailed">DbContext.SaveChangesFailed</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext__ctor_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.#ctor*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_GenshinDataApp_Backend_Data_GenshinDbContext__" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{GenshinDataApp.Backend.Data.GenshinDbContext})">
+  GenshinDbContext(DbContextOptions&lt;GenshinDbContext&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GenshinDbContext(DbContextOptions&lt;GenshinDbContext&gt; options)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>options</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptions-1">DbContextOptions</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Data.GenshinDbContext.html">GenshinDbContext</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceHistories">
+  ArtifactPieceHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactPieceHistory&gt; ArtifactPieceHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactPieceHistory.html">ArtifactPieceHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceTranslationHistories">
+  ArtifactPieceTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactPieceTranslationHistory&gt; ArtifactPieceTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactPieceTranslationHistory.html">ArtifactPieceTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieceTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieceTranslations">
+  ArtifactPieceTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactPieceTranslation&gt; ArtifactPieceTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactPieceTranslation.html">ArtifactPieceTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieces_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieces*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactPieces" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactPieces">
+  ArtifactPieces
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactPiece&gt; ArtifactPieces { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactPiece.html">ArtifactPiece</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetHistories">
+  ArtifactSetHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactSetHistory&gt; ArtifactSetHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactSetHistory.html">ArtifactSetHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetTranslationHistories">
+  ArtifactSetTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactSetTranslationHistory&gt; ArtifactSetTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactSetTranslationHistory.html">ArtifactSetTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSetTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSetTranslations">
+  ArtifactSetTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactSetTranslation&gt; ArtifactSetTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactSetTranslation.html">ArtifactSetTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSets_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSets*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ArtifactSets" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ArtifactSets">
+  ArtifactSets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ArtifactSet&gt; ArtifactSets { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactSet.html">ArtifactSet</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportHistories">
+  BugReportHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L33"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BugReportHistory&gt; BugReportHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BugReportHistory.html">BugReportHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportImageHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportImageHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportImageHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportImageHistories">
+  BugReportImageHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BugReportImageHistory&gt; BugReportImageHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BugReportImageHistory.html">BugReportImageHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportImages_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportImages*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReportImages" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReportImages">
+  BugReportImages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BugReportImage&gt; BugReportImages { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BugReportImage.html">BugReportImage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReports_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReports*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BugReports" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BugReports">
+  BugReports
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BugReport&gt; BugReports { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BugReport.html">BugReport</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildHistories">
+  BuildHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BuildHistory&gt; BuildHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BuildHistory.html">BuildHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildSnapshotHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildSnapshotHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildSnapshotHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildSnapshotHistories">
+  BuildSnapshotHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BuildSnapshotHistory&gt; BuildSnapshotHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BuildSnapshotHistory.html">BuildSnapshotHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildSnapshots_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildSnapshots*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_BuildSnapshots" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.BuildSnapshots">
+  BuildSnapshots
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;BuildSnapshot&gt; BuildSnapshots { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.BuildSnapshot.html">BuildSnapshot</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Builds_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Builds*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Builds" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Builds">
+  Builds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Build&gt; Builds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationHistories">
+  CharacterConstellationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterConstellationHistory&gt; CharacterConstellationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterConstellationHistory.html">CharacterConstellationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationTranslationHistories">
+  CharacterConstellationTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterConstellationTranslationHistory&gt; CharacterConstellationTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterConstellationTranslationHistory.html">CharacterConstellationTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellationTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellationTranslations">
+  CharacterConstellationTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterConstellationTranslation&gt; CharacterConstellationTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterConstellationTranslation.html">CharacterConstellationTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterConstellations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterConstellations">
+  CharacterConstellations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterConstellation&gt; CharacterConstellations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterConstellation.html">CharacterConstellation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterHistories">
+  CharacterHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterHistory&gt; CharacterHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterHistory.html">CharacterHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentHistories">
+  CharacterTalentHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTalentHistory&gt; CharacterTalentHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTalentHistory.html">CharacterTalentHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentTranslationHistories">
+  CharacterTalentTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTalentTranslationHistory&gt; CharacterTalentTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTalentTranslationHistory.html">CharacterTalentTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalentTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalentTranslations">
+  CharacterTalentTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTalentTranslation&gt; CharacterTalentTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTalentTranslation.html">CharacterTalentTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalents_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalents*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTalents" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTalents">
+  CharacterTalents
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTalent&gt; CharacterTalents { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTalent.html">CharacterTalent</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTranslationHistories">
+  CharacterTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTranslationHistory&gt; CharacterTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTranslationHistory.html">CharacterTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_CharacterTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.CharacterTranslations">
+  CharacterTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;CharacterTranslation&gt; CharacterTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.CharacterTranslation.html">CharacterTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Characters_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Characters*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Characters" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Characters">
+  Characters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Character&gt; Characters { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Character.html">Character</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementHistories">
+  ElementHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ElementHistory&gt; ElementHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ElementHistory.html">ElementHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementTranslationHistories">
+  ElementTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ElementTranslationHistory&gt; ElementTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ElementTranslationHistory.html">ElementTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ElementTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ElementTranslations">
+  ElementTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ElementTranslation&gt; ElementTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ElementTranslation.html">ElementTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Elements_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Elements*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Elements" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Elements">
+  Elements
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Element&gt; Elements { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Element.html">Element</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_EmailRateLimits_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.EmailRateLimits*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_EmailRateLimits" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.EmailRateLimits">
+  EmailRateLimits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;EmailRateLimit&gt; EmailRateLimits { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.EmailRateLimit.html">EmailRateLimit</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ImportLogHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ImportLogHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ImportLogHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ImportLogHistories">
+  ImportLogHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ImportLogHistory&gt; ImportLogHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ImportLogHistory.html">ImportLogHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_ImportLogs_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ImportLogs*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_ImportLogs" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.ImportLogs">
+  ImportLogs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;ImportLog&gt; ImportLogs { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.ImportLog.html">ImportLog</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_LanguageHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.LanguageHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_LanguageHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.LanguageHistories">
+  LanguageHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;LanguageHistory&gt; LanguageHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.LanguageHistory.html">LanguageHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Languages_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Languages*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Languages" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Languages">
+  Languages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Language&gt; Languages { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Language.html">Language</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_RefreshTokenHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RefreshTokenHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_RefreshTokenHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RefreshTokenHistories">
+  RefreshTokenHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;RefreshTokenHistory&gt; RefreshTokenHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.RefreshTokenHistory.html">RefreshTokenHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_RefreshTokens_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RefreshTokens*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_RefreshTokens" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RefreshTokens">
+  RefreshTokens
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;RefreshToken&gt; RefreshTokens { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.RefreshToken.html">RefreshToken</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionHistories">
+  RegionHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;RegionHistory&gt; RegionHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.RegionHistory.html">RegionHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionTranslationHistories">
+  RegionTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;RegionTranslationHistory&gt; RegionTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.RegionTranslationHistory.html">RegionTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_RegionTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.RegionTranslations">
+  RegionTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;RegionTranslation&gt; RegionTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.RegionTranslation.html">RegionTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Regions_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Regions*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Regions" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Regions">
+  Regions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Region&gt; Regions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Region.html">Region</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeHistories">
+  StatTypeHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L103"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StatTypeHistory&gt; StatTypeHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.StatTypeHistory.html">StatTypeHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeTranslationHistories">
+  StatTypeTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StatTypeTranslationHistory&gt; StatTypeTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.StatTypeTranslationHistory.html">StatTypeTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypeTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypeTranslations">
+  StatTypeTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StatTypeTranslation&gt; StatTypeTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.StatTypeTranslation.html">StatTypeTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypes_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypes*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_StatTypes" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.StatTypes">
+  StatTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StatType&gt; StatTypes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_TechnicalPermissionHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.TechnicalPermissionHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_TechnicalPermissionHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.TechnicalPermissionHistories">
+  TechnicalPermissionHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;TechnicalPermissionHistory&gt; TechnicalPermissionHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.TechnicalPermissionHistory.html">TechnicalPermissionHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_TechnicalPermissions_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.TechnicalPermissions*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_TechnicalPermissions" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.TechnicalPermissions">
+  TechnicalPermissions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;TechnicalPermission&gt; TechnicalPermissions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.TechnicalPermission.html">TechnicalPermission</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserArtifactHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserArtifactHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserArtifactHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserArtifactHistories">
+  UserArtifactHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserArtifactHistory&gt; UserArtifactHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserArtifactHistory.html">UserArtifactHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserArtifacts_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserArtifacts*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserArtifacts" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserArtifacts">
+  UserArtifacts
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L115"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserArtifact&gt; UserArtifacts { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserArtifact.html">UserArtifact</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserCharacterHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserCharacterHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserCharacterHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserCharacterHistories">
+  UserCharacterHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserCharacterHistory&gt; UserCharacterHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserCharacterHistory.html">UserCharacterHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserCharacters_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserCharacters*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserCharacters" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserCharacters">
+  UserCharacters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserCharacter&gt; UserCharacters { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserCharacter.html">UserCharacter</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserHistories">
+  UserHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserHistory&gt; UserHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserHistory.html">UserHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserWeaponHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserWeaponHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserWeaponHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserWeaponHistories">
+  UserWeaponHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserWeaponHistory&gt; UserWeaponHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserWeaponHistory.html">UserWeaponHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_UserWeapons_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserWeapons*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_UserWeapons" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.UserWeapons">
+  UserWeapons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L125"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;UserWeapon&gt; UserWeapons { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.UserWeapon.html">UserWeapon</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Users_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Users*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Users" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Users">
+  Users
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L113"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;User&gt; Users { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.User.html">User</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_VwUserArtifactStats_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.VwUserArtifactStats*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_VwUserArtifactStats" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.VwUserArtifactStats">
+  VwUserArtifactStats
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;VwUserArtifactStat&gt; VwUserArtifactStats { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.VwUserArtifactStat.html">VwUserArtifactStat</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponHistories">
+  WeaponHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponHistory&gt; WeaponHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponHistory.html">WeaponHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementHistories">
+  WeaponRefinementHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponRefinementHistory&gt; WeaponRefinementHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponRefinementHistory.html">WeaponRefinementHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementTranslationHistories">
+  WeaponRefinementTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponRefinementTranslationHistory&gt; WeaponRefinementTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponRefinementTranslationHistory.html">WeaponRefinementTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinementTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinementTranslations">
+  WeaponRefinementTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponRefinementTranslation&gt; WeaponRefinementTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponRefinementTranslation.html">WeaponRefinementTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinements_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinements*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponRefinements" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponRefinements">
+  WeaponRefinements
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponRefinement&gt; WeaponRefinements { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponRefinement.html">WeaponRefinement</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTranslationHistories">
+  WeaponTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponTranslationHistory&gt; WeaponTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponTranslationHistory.html">WeaponTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTranslations">
+  WeaponTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponTranslation&gt; WeaponTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponTranslation.html">WeaponTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeHistories">
+  WeaponTypeHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L149"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponTypeHistory&gt; WeaponTypeHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponTypeHistory.html">WeaponTypeHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeTranslationHistories_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeTranslationHistories*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeTranslationHistories" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeTranslationHistories">
+  WeaponTypeTranslationHistories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponTypeTranslationHistory&gt; WeaponTypeTranslationHistories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponTypeTranslationHistory.html">WeaponTypeTranslationHistory</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeTranslations_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeTranslations*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypeTranslations" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypeTranslations">
+  WeaponTypeTranslations
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L151"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponTypeTranslation&gt; WeaponTypeTranslations { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponTypeTranslation.html">WeaponTypeTranslation</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypes_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypes*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_WeaponTypes" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.WeaponTypes">
+  WeaponTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;WeaponType&gt; WeaponTypes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.WeaponType.html">WeaponType</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_Weapons_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Weapons*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_Weapons" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.Weapons">
+  Weapons
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Weapon&gt; Weapons { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Weapon.html">Weapon</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="GenshinDataApp_Backend_Data_GenshinDbContext_OnModelCreating_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.OnModelCreating*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Data_GenshinDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_" data-uid="GenshinDataApp.Backend.Data.GenshinDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+  OnModelCreating(ModelBuilder)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this method to further configure the model that was discovered by convention from the entity types
+exposed in <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbset-1">DbSet&lt;TEntity&gt;</a> properties on your derived context. The resulting model may be cached
+and re-used for subsequent instances of your derived context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnModelCreating(ModelBuilder modelBuilder)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>modelBuilder</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder">ModelBuilder</a></dt>
+    <dd><p>The builder being used to construct the model for this context. Databases (and other extensions) typically
+define extension methods on this object that allow you to configure aspects of the model that are specific
+to a given database.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="GenshinDataApp_Backend_Data_GenshinDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>
+    If a model is explicitly set on the options for this context (via <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontextoptionsbuilder.usemodel">UseModel(IModel)</a>)
+    then this method will not be run. However, it will still run when creating a compiled model.
+</p>
+<p>
+    See <a href="https://aka.ms/efcore-docs-modeling">Modeling entity types and relationships</a> for more information and
+    examples.
+</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Data/GenshinDbContext.cs/#L8" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Unofficial fan-made project. Genshin Impact is a trademark of HoYoverse Co., Ltd.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

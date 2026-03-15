@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class UserArtifact | GenshinDataApp - Backend Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class UserArtifact | GenshinDataApp - Backend Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/gabrielgsn4195-ux/GenshinDataApp/new/integration/apiSpec/new?filename=GenshinDataApp_Backend_Entities_UserArtifact.md&amp;value=---%0Auid%3A%20GenshinDataApp.Backend.Entities.UserArtifact%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="GenshinDataApp.Backend.Entities.UserArtifact">
+
+
+
+  <h1 id="GenshinDataApp_Backend_Entities_UserArtifact" data-uid="GenshinDataApp.Backend.Entities.UserArtifact" class="text-break">
+Class UserArtifact  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L6"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="GenshinDataApp.html">GenshinDataApp</a>.<a class="xref" href="GenshinDataApp.Backend.html">Backend</a>.<a class="xref" href="GenshinDataApp.Backend.Entities.html">Entities</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>GenshinDataApp.Backend.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class UserArtifact</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">UserArtifact</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_ArtifactPiece_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.ArtifactPiece*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_ArtifactPiece" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.ArtifactPiece">
+  ArtifactPiece
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ArtifactPiece ArtifactPiece { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.ArtifactPiece.html">ArtifactPiece</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_ArtifactPieceId_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.ArtifactPieceId*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_ArtifactPieceId" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.ArtifactPieceId">
+  ArtifactPieceId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ArtifactPieceId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactCirclets_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactCirclets*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactCirclets" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactCirclets">
+  BuildArtifactCirclets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Build&gt; BuildArtifactCirclets { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactFlowers_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactFlowers*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactFlowers" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactFlowers">
+  BuildArtifactFlowers
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Build&gt; BuildArtifactFlowers { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactGoblets_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactGoblets*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactGoblets" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactGoblets">
+  BuildArtifactGoblets
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Build&gt; BuildArtifactGoblets { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactPlumes_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactPlumes*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactPlumes" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactPlumes">
+  BuildArtifactPlumes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Build&gt; BuildArtifactPlumes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactSands_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactSands*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_BuildArtifactSands" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.BuildArtifactSands">
+  BuildArtifactSands
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Build&gt; BuildArtifactSands { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="GenshinDataApp.Backend.Entities.Build.html">Build</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_Id_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Id*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_Id" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Id">
+  Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L8"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_IsActive_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.IsActive*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_IsActive" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.IsActive">
+  IsActive
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsActive { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_Level_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Level*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_Level" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Level">
+  Level
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Level { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_MainStat_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStat*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_MainStat" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStat">
+  MainStat
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatType MainStat { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_MainStatId_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStatId*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_MainStatId" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStatId">
+  MainStatId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MainStatId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_MainStatValue_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStatValue*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_MainStatValue" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.MainStatValue">
+  MainStatValue
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal MainStatValue { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_PublicId_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.PublicId*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_PublicId" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.PublicId">
+  PublicId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid PublicId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.guid">Guid</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_Rarity_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Rarity*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_Rarity" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.Rarity">
+  Rarity
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Rarity { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1">
+  SubStat1
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L56"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatType? SubStat1 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1Id_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1Id*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1Id" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1Id">
+  SubStat1Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SubStat1Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1Value_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1Value*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat1Value" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat1Value">
+  SubStat1Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal? SubStat1Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2">
+  SubStat2
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L58"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatType? SubStat2 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2Id_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2Id*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2Id" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2Id">
+  SubStat2Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SubStat2Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2Value_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2Value*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat2Value" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat2Value">
+  SubStat2Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal? SubStat2Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3">
+  SubStat3
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatType? SubStat3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3Id_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3Id*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3Id" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3Id">
+  SubStat3Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SubStat3Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3Value_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3Value*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat3Value" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat3Value">
+  SubStat3Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal? SubStat3Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4">
+  SubStat4
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual StatType? SubStat4 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.StatType.html">StatType</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4Id_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4Id*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4Id" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4Id">
+  SubStat4Id
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SubStat4Id { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4Value_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4Value*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_SubStat4Value" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.SubStat4Value">
+  SubStat4Value
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public decimal? SubStat4Value { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_User_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.User*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_User" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.User">
+  User
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual User User { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="GenshinDataApp.Backend.Entities.User.html">User</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="GenshinDataApp_Backend_Entities_UserArtifact_UserId_" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.UserId*"></a>
+
+  <h3 id="GenshinDataApp_Backend_Entities_UserArtifact_UserId" data-uid="GenshinDataApp.Backend.Entities.UserArtifact.UserId">
+  UserId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int UserId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/gabrielgsn4195-ux/GenshinDataApp/blob/integration/GenshinDataApp.Backend/Entities/UserArtifact.cs/#L6" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          Unofficial fan-made project. Genshin Impact is a trademark of HoYoverse Co., Ltd.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

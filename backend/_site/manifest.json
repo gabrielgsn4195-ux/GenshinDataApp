@@ -1,0 +1,1404 @@
+{
+  "source_base_path": "/home/runner/work/GenshinDataApp/GenshinDataApp/GenshinDataApp.Backend",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.AuthResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.AuthResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.Auth.AuthResponse",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.LoginRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.LoginRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.Auth.LoginRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.RefreshTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.RefreshTokenRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.Auth.RefreshTokenRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.RegisterRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.RegisterRequest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.Auth.RegisterRequest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.Auth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.Auth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.User.UserDto.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.User.UserDto.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.User.UserDto",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.DTOs.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.DTOs.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.DTOs.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Data.GenshinDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Data.GenshinDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Data.GenshinDbContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPiece.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPiece.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactPiece",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactPieceHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactPieceTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactPieceTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactPieceTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactSet",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactSetHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactSetTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ArtifactSetTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ArtifactSetTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BugReport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BugReport.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BugReport",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BugReportHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BugReportHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BugReportHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BugReportImage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BugReportImage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BugReportImage",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BugReportImageHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BugReportImageHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BugReportImageHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Build.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Build.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Build",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BuildHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BuildHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BuildHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BuildSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BuildSnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BuildSnapshot",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.BuildSnapshotHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.BuildSnapshotHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.BuildSnapshotHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Character.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Character.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Character",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterConstellation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterConstellationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterConstellationTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterConstellationTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterConstellationTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTalent",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTalentHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTalentTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTalentTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTalentTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.CharacterTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.CharacterTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Element.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Element",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ElementHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ElementHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ElementHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ElementTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ElementTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ElementTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ElementTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ElementTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ElementTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.EmailRateLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.EmailRateLimit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.EmailRateLimit",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ImportLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ImportLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ImportLog",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.ImportLogHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.ImportLogHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.ImportLogHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Language.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Language.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Language",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.LanguageHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.LanguageHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.LanguageHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Product.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Product.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Product",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.RefreshToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.RefreshToken.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.RefreshToken",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.RefreshTokenHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.RefreshTokenHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.RefreshTokenHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Region.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Region",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.RegionHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.RegionHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.RegionHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.RegionTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.RegionTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.RegionTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.RegionTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.RegionTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.RegionTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.SecurityLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.SecurityLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.SecurityLog",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.StatType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.StatType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.StatType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.StatTypeHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.StatTypeTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.StatTypeTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.StatTypeTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.TechnicalPermission.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.TechnicalPermission.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.TechnicalPermission",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.TechnicalPermissionHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.TechnicalPermissionHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.TechnicalPermissionHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserArtifact.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserArtifact.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserArtifact",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserArtifactHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserArtifactHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserArtifactHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserCharacter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserCharacter",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserCharacterHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserCharacterHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserCharacterHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserWeapon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserWeapon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserWeapon",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.UserWeaponHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.UserWeaponHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.UserWeaponHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.VwUserArtifactStat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.VwUserArtifactStat.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.VwUserArtifactStat",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.Weapon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.Weapon.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.Weapon",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponRefinement",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponRefinementHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponRefinementTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponRefinementTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponRefinementTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponType",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponTypeHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeTranslation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeTranslation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponTypeTranslation",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeTranslationHistory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.WeaponTypeTranslationHistory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities.WeaponTypeTranslationHistory",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Entities.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Entities",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.BaseRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.BaseRepository-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.BaseRepository<TEntity>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.IRefreshTokenRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.IRefreshTokenRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.IRefreshTokenRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.IRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.IRepository-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.IRepository<TEntity>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.IUserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.IUserRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.IUserRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.RefreshTokenRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.RefreshTokenRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.RefreshTokenRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.UserRepository.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.UserRepository.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories.UserRepository",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Backend.Repositories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Backend.Repositories.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Backend.Repositories",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.IJwtHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.IJwtHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security.IJwtHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.IPasswordHasher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.IPasswordHasher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security.IPasswordHasher",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.JwtHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.JwtHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security.JwtHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.JwtSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.JwtSettings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security.JwtSettings",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.PasswordHasher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.PasswordHasher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security.PasswordHasher",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Infrastructure.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Infrastructure.Security.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Infrastructure.Security",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Services.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Services.Controllers.AuthController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Services.Controllers.AuthController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Services.Controllers.UsersController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Services.Controllers.UsersController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Services.Controllers.UsersController",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/GenshinDataApp.Services.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/GenshinDataApp.Services.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "GenshinDataApp.Services.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
