@@ -16,6 +16,9 @@ GenshinDataApp.Frontend/src/environments/environment.development.ts
 # Copilot instructions -- arquitectura interna, no publica
 .github/copilot-instructions/
 
+# Database scripts -- no incluir en repositorio
+Database/scripts/
+
 # General
 .env
 *.env.local
@@ -24,4 +27,4 @@ docs/backend/
 docs/frontend/
 *.log
 logs/
-git_check_result.txt 
+git_check_result.txt
